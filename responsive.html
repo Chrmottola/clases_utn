@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- UTF-8 permite que se visualicen caracteres latinos -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Responsive</title>
+</head>
+
+<body class="body_responsive">
+    <header class="navbar_contenedor_responsive">
+        <div class="logo_responsive">
+            <H2>Pagina Responsive</H2>
+        </div>
+        <nav class="navbar_responsive">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Register</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Contanco</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section_responsive">
+        <!-- form action envia el formulario a la API formspree, esta pagina envia el contenido del formulario cargado por el usuario -->
+        <form action="https://formspree.io/f/xyyvkavd" method="post" class="formulario_responsive">
+            <!-- La etiqueta fieldset, encierra en conjunto todo el contenido del formulario Legend se utuliza para darle un titulo-->
+            <fieldset class="fieldset_responsive">
+                <legend class="legend_responsive">Formulario de Contacto</legend>
+                <!-- Se recomienda encerrar label e input en un contenedor div -->
+                <div>
+                    <!-- for y id da el foco al input -->
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Ingrese Nombre " required>
+                </div>
+                <div>
+                    <label for="email">Correo Electronico</label>
+                    <input id="email" name="email" type="email" placeholder="Ingrese Email" required>
+                </div>
+                    <label for="password">Contraseña</label>
+                    <input id="password" name="password" type="password" placeholder="Ingrese Password" required>
+                <div>
+                    <label for="fecha">Fecha de Nacimiento</label>
+                    <input id="fecha" name="fecha" type="date" placeholder="Fecha de Nacimiento" required>
+                </div>
+                
+                <!-- Area de Texto -->
+                <div>
+                <label for="mensaje">Ingrese Comentario</label>
+                <textarea name="mensaje" id="mensaje" cols="20" rows="5" minlength="2" maxlength="30"></textarea>
+                </div>
+                <!-- Menu desplegable -->
+                <label for="talle">Ingrese Talles</label>
+                <select name="talle" id="talle">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                </select>
+
+                <div>
+                    <label for="fecha">Adjunte foto</label>
+                    <input id="fecha" name="foto" type="file" placeholder="Seleccionar archivo" required>
+                </div>
+                
+                <!-- Botones Radio (lista de opciones) -->
+                <p class="radio_responsive">Pais de Origen</p>
+                <br>
+                <!-- Tecla windows + punto abre panel de emiticon -->
+                <label for="pais">Argentina❤️</label>
+                <input type="radio" name="pais" value="argentina">
+                
+                <label for="pais">Brasil</label>
+                <input type="radio" name="pais" value="brasil">
+                
+                <label for="pais">Uruguay</label>
+                <input type="radio" name="pais" value="uruguay">
+                <br>
+                <!-- Casilla de chequeo -->
+                <div class="Checkbox_responsive">
+                <label>Aceptar Términos y Condiciones</label>
+                <input type="checkbox" name="acepta" value="1">
+                </div>
+
+                <!-- Botones -->
+                <input type="submit" value="Enviar Formulario" class="boton_enviar_responsive">
+
+                <input type="reset" value="Limpiar Formulario">
+
+                <input type="button" value="No tiene accion">
+            </fieldset>
+        </form>
+    </section>
+    
+    
+</body>
+</html>

@@ -1,0 +1,706 @@
+/* Normalizar Margenes y padding en toda la pagina y en todos sus elementos  */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /* Deja sin atributos todos los textos, ejemplo subrayado de link */
+    /* color: black */
+    /* Texto por defecto en negro */
+}
+
+/* Ajusta la letra por defecto a 10px 
+html{
+    font-size: 10px;
+}
+*/
+/* Selector por tipo de etiqueta  
+p{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+h2{ 
+    text-shadow: 5px 5px 5px black;
+    text-decoration-line: underline;
+}
+*/
+/* ---------------------------------Proyecto Cafe------------------------------------------------------------------------------- */
+/*Preponderancia de propiedades las diferentes se van sumando y las repetidas solo queda la que tiene mayor jerarquia  (Escala de <importancia)  
+1.Important corta toda precedencia que traiga de otras directivas (id,estilos en linea, clases, etiquetas, su uso debe ser limitado
+2.Estilo en linea (style) se usa directamente donde se quiere aplicar
+3.id
+4.Clase (Class)
+5.etiquetas
+/* usar import para linkear fuentes externas se utiliza desde la hoja estilos se usa para dar la misma fuente a todo el proyecto, tambien podemos linkear poniendo el link en el head de cada pagina
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+  */
+/* Selector por tipo de etiqueta*/
+/* h1{
+    color:brown
+}
+section{
+    background-color: aqua;
+}
+*/
+
+
+/* Elegir tipo de letra para toda la pagina, y color de fondo */
+.body_cafe {
+    font-family: 'Oswald', sans-serif;
+    background-color: aqua;
+    display: grid;
+    grid-template-rows: 300px 600px 250px 220px 50px 50px;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-areas:
+        "header header"
+        "section_1 form"
+        "section_2 form"
+        "section_3 form"
+        "div div"
+        "footer footer"
+}
+
+/* Selector por clases */
+/* Dando propiedades a la imagen de fondo,color de fondo,url, altura y que no se repita continuamente la imagen,que cubra todo el espacio,que se posicione al centro,padding y tamaño de la fuente */
+.imagen_de_fondo_header_cafe {
+    background-color: darksalmon;
+    background-image: url(./img/granos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    font-size: 3rem;
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    border-bottom: solid black;
+}
+
+.color_de_texto_cafe {
+    color: black;
+}
+
+.titulo_cafe {
+    color: blue;
+    font-size: 50px;
+}
+
+.tamaño_subtitulos_cafe {
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding: 1rem;
+    text-decoration: underline;
+}
+
+.pasos_para_servir_un_buen_cafe {
+    background-color: darksalmon;
+    background-image: url(./img/pattercoffe.jpg);
+    background-repeat: no-repeat;
+    /* Cover adapta la imagen al tamaño de la pantalla   */
+    background-size: cover;
+    background-position: center;
+    grid-area: section_1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black;
+    padding-bottom: 1rem;
+}
+
+.pasos_para_servir_un_buen_cafe ol li {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.tipos_de_cafe_cafe {
+    background-color: darksalmon;
+    background-image: url(./img/pattercoffe.jpg);
+    background-repeat: no-repeat;
+    /* Cover adapta la imagen al tamaño de la pantalla   */
+    background-size: cover;
+    background-position: center;
+    grid-area: section_2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black;
+}
+
+.tipos_de_cafe_cafe ul li {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.tipos_de_granos_cafe {
+    background-color: darksalmon;
+    background-image: url(./img/pattercoffe.jpg);
+    background-repeat: no-repeat;
+    /* Cover adapta la imagen al tamaño de la pantalla   */
+    background-size: cover;
+    background-position: center;
+    grid-area: section_3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black;
+}
+
+.tipos_de_granos_cafe ul li {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.contenido_cafe {
+    background-color: white;
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.volver_a_titulo_cafe {
+    background-color: white;
+    grid-area: div;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid black;
+    justify-content: space-between;
+}
+
+.footer_cafe {
+    background-color: white;
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid black;
+    justify-content: left;
+}
+
+/* Selector por id solo se puede usar 1 solo id */
+#ir_a_titulo {
+    background-color: darksalmon;
+}
+
+
+/*-----------------------------Grids-----------------------------*/
+.body_grids {
+    background-color: azure;
+    display: grid;
+    /* establece tamaño de filas */
+    grid-template-rows: 100px 70px 800px 400px 100px;
+    /* establece tamaño de columnas atributo repeat repite la misma medida en las columnas en este caso 4 columnas */
+    grid-template-columns: repeat(4, 1fr);
+    /* Establece la grilla usar el mismo nombre en el grid-area de cada elemento*/
+    grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "main main main aside"
+        "section_1 section_2 section_3 aside"
+        "footer footer footer footer ";
+
+}
+
+.header_grids {
+    background-color: aquamarine;
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    /* cuando el flex direccion es row se ajusta el texto en el eje x usamos justify */
+    /* cuando el flex direccion es column se ajusta el texto en el eje y usamos aling-items */
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.logoContainerHeader_grids {
+    display: flex;
+    align-items: center;
+}
+
+.buscador_grids {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.buscador_grids input {
+    width: 200px;
+}
+
+.nav_grids {
+    background-color: rgb(212, 21, 21);
+    grid-area: nav;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.main_grids {
+    background-color: brown;
+    grid-area: main;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.aside_grids {
+    background-color: darkcyan;
+    grid-area: aside;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.section_grids {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.section1_grids {
+    background-color: blue;
+    grid-area: section_1;
+}
+
+.section2_grids {
+    background-color: burlywood;
+    grid-area: section_2;
+}
+
+.section3_grids {
+    background-color: coral;
+    grid-area: section_3;
+}
+
+.footer_grids {
+    background-color: darkblue;
+    grid-area: footer;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/*-----------------------------Box_Modeling-----------------------------*/
+/* Etiquetas en bloque usa todo el ancho de pantalla 1 solo elemento en el bloque
+<article> <aside> <audio> <blockquote> <canvas> 
+<dd> <div> <dl> <fieldset> <figcaption> <figure> 
+<footer> <form>
+ */
+/* Etiquetas en linea acomoda los elementos uno al lado del otro no se puede aplicar propiedades width, heigth
+strong,a,br, img,script, span,button, 
+input, label, select, textarea
+*/
+.conteiner_boxmodeling {
+    background-color: darkgreen;
+    /* Alinear elementos y los textos que contengan estos elementos text-align */
+    text-align: center;
+}
+
+.caja_boxmodeling {
+    width: 200px;
+    height: 300px;
+    /* display inline-block da al elemento las propiedades de los 2 tipos de etiquetas */
+    display: inline-block;
+    border: 10px solid black;
+    margin: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.caja1_boxmodeling {
+    background-color: blue;
+    /* Algunos tipos de Bordes */
+    border-top: groove 10px yellow;
+    border-bottom: dotted 10px red;
+    border-left: dashed 10px darkblue;
+    border-right: double 10px black;
+}
+
+.caja2_boxmodeling {
+    background-color: yellow;
+    /* Overflow determina comportamiento de la caja sobre el contenido de la misma */
+    /* Overflow: hidden;/* oculta el contenido excedente */
+    /* Overflow: scroll; genera una barra de scroll en los 2 ejes */
+    /* Overflow: auto genera la barra de scroll donde la necesite */
+    overflow: auto;
+}
+
+.caja3_boxmodeling {
+    background-color: red;
+    /* display: none oculta un elemento y ocupa su lugar con el siguiente elemento */
+    display: none;
+}
+
+.caja4_boxmodeling {
+    background-color: blueviolet;
+    /* Position relative ubica el objeto en relacion a la ubicacion actual de ese objeto */
+    position: relative;
+    top: 40px;
+    left: 60px;
+}
+
+.caja5_boxmodeling {
+    background-color: brown;
+    /* Position sticky mantiene la posicion del objeto al scrolear ubica el objeto en el margen superior */
+    position: sticky;
+    top: 20px
+}
+
+.caja6_boxmodeling {
+    background-color: aqua;
+    /* fija el objeto en la posicion que se desee en relacion al viewport que es la ventana del navegador queda en la misma posicon aunque se haga scroll */
+    position: fixed;
+    top: 40px;
+    left: 0;
+}
+
+
+.caja7_boxmodeling {
+    background-color: coral;
+    /* z-index le da prioridad a los objeto superpuesto siendo el valor mas alto el que se va a ver primero */
+    z-index: 1;
+}
+
+.caja8_boxmodeling {
+    background-color: darkmagenta;
+    /* position Absolute ubica un elemento en base al elemento padre si es que este tiene posicion relativa si no es asi se ubica respecto al body */
+    position: absolute;
+    top: 40px;
+    left: 60px;
+}
+
+.navegador_boxmodeling {
+    background-color: pink;
+    height: 70px;
+}
+
+.menu_boxmodeling {
+    list-style: none;
+    font: size 0;
+}
+
+.menu_boxmodeling li {
+    display: inline-block;
+    width: 15%;
+    position: relative;
+    font-size: 14px;
+}
+
+.submenu_boxmodeling {
+    position: absolute;
+    display: none;
+}
+
+.submenu_boxmodeling li {
+    display: block;
+
+}
+
+.menu_boxmodeling li:hover ul {
+    display: block;
+}
+
+/* -------------------------------Formularios Pseudoclases--------------------------------  */
+.section_formulario {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* El valor border-box en el box-sizing hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente.  */
+    /* si a una caja le damos width 250px padding 10px y border 10px con el border box incluye padding y border en los 250px */
+    box-sizing: border-box;
+}
+
+.formulario_formulario {
+    padding: 4rem;
+    margin: 2rem;
+    background-color: coral;
+    border-radius: 5px;
+}
+
+.formulario_formulario input,
+.formulario_formulario textarea {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.formulario_formulario select {
+    width: 105%;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.fieldset_formulario,
+legend {
+    border: none;
+}
+
+.legend_formulario {
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+.radio_formulario {
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.Checkbox_formulario {
+    display: flex;
+}
+
+
+.boton_enviar_formulario {
+    background-color: aqua;
+    border: color aqua;
+    /* Radius redondea los bordes de los objeto */
+    border-radius: 4px;
+
+}
+
+.boton_enviar_formulario:hover {
+    background-color: blueviolet;
+    border: solid 2px blueviolet;
+    font-size: 2rem;
+}
+
+.hijo_formulario a:hover {
+    background-color: blue;
+    font-weight: 700;
+}
+
+.hijo_formulario a:link {
+    background-color: red;
+    text-decoration: none;
+}
+
+.hijo_formulario a:visited {
+    background-color: #999999;
+}
+
+.hijo_formulario a:active {
+    background-color: yellow;
+    color: green;
+}
+
+/* Psedoclase div:not le da atributos a todo menos a la clase que se especifique */
+/* div:not(.padre_formulario){
+    padding-left:40px;
+    padding-right:40px;
+} */
+
+/* div:nth-child(2) Le da propiedades a item especificos en este caso a los segundos hijos (2) dentro la clase */
+.padre_formulario div:nth-child(2) {
+    font-weight: bold;
+    color: orange;
+}
+
+/*----------------------------Formularios Clase de Repaso------------------------------------------------------------- */
+.body_form_repaso {
+    margin: 0;
+    padding: 20vh 10%;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+/* background color degradado */ 
+/* https://cssgradient.io */  
+    background: rgb(190,193,236);
+    background: linear-gradient(180deg, rgba(190,193,236,1) 0%, rgba(195,113,193,1) 50%, rgba(236,195,235,1) 95%);
+}
+
+.titulo_form_repaso h1 {
+    text-align: center;
+    margin-bottom: 7vh;
+    font-size: 3rem;
+}
+
+.formulario_form_repaso {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.main_form_repaso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+/* Gap genera separacion en los elementos en este caso separa los input del div que contiene los p*/  
+    gap: 10vh;
+}
+
+.div_form_repaso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+}
+
+.div_form_repaso p a{
+  font-weight: 700;
+  color:#161614;
+}
+
+.mensaje_error_form_repaso{
+  color: #D97A84 ;
+  text-align: center;
+}
+
+.input_form_repaso{
+  padding: 10px 3px;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.submit_form_repaso{
+  border: 1px solid white;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.submit_form_repaso:hover{
+/* Transition genera un delay en el cambio de estilo. */  
+  transition: 1s all;
+  border: 1px solid black ;
+  background-color: white;
+  color:black;
+}
+
+/* ---------------------------Responsive_Mobile First---------------------------------------------------------------- */
+/* Resolución de Pantallas */
+/*
+Dispositivos extra pequeños (teléfonos verticales, menos de 576px)
+No hay consulta de medios para 'xs', ya que este es el valor predeterminado en Bootstrap
+
+Dispositivos pequeños (teléfonos horizontales, 576px y superiores)
+@media (min-width: 576px) { ... }
+
+Dispositivos medianos (tabletas, 768px y superiores)
+@media (min-width: 768px) { ... }
+
+Dispositivos grandes (escritorios, 992px y superiores)
+@media (min-width: 992px) { ... }
+
+Dispositivos extra grandes (escritorios grandes, 1200px y superiores)
+@media (min-width: 1200px) { ... }
+*/
+.body_responsive{
+    
+}
+
+.navbar_contenedor_responsive{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ .navbar_responsive ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar_responsive a, li{
+    list-style-type: none;
+    color: white;
+}   
+
+.section_responsive {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* El valor border-box en el box-sizing hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente.  */
+    /* si a una caja le damos width 250px padding 10px y border 10px con el border box incluye padding y border en los 250px */
+    box-sizing: border-box;
+}
+
+.formulario_responsive {
+    padding: 4rem;
+    margin: 2rem;
+    background-color: coral;
+    border-radius: 5px;
+}
+
+.formulario_responsive input,
+.formulario_responsive textarea {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.formulario_responsive select {
+    width: 105%;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.fieldset_responsive,
+legend {
+    border: none;
+}
+
+.legend_responsive {
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+.radio_responsive {
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.Checkbox_responsive {
+    display: flex;
+}
+
+
+.boton_enviar_responsive {
+    background-color: aqua;
+    border: color aqua;
+    /* Radius redondea los bordes de los objeto */
+    border-radius: 4px;
+}
+
+.boton_enviar_responsive:hover {
+    background-color: blueviolet;
+    border: solid 2px blueviolet;
+    font-size: 2rem;
+}
+
+@media (min-width: 576px){
+    Body{
+        background-color: green;
+    }
+}
+
+@media (min-width: 768px){
+    Body{
+        background-color: blue;
+    }
+} 
+
+@media (min-width: 992px){
+    Body{
+        background-color: red;
+    }
+}
