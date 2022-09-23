@@ -540,6 +540,17 @@ legend {
     font-size: 2rem;
 }
 
+@media(max-width: 575px){
+    Body{
+        background-color:yellow;
+        }
+    .formulario_responsive{
+        background-color: yellow;
+        margin: 0;
+        padding: 0;
+        }   
+}
+
 @media (min-width: 576px){
     Body{
         background-color: green;
@@ -556,4 +567,24 @@ legend {
     Body{
         background-color: red;
     }
+    .navbar_contenedor_responsive{
+        flex-direction: row;
+        gap: 60px;
+        justify-content:space-between;   
+    }
+    .logo_responsive{
+        margin-left: 20px;
+        color: aqua;
+    }
+    .navbar_responsive ul{
+        flex-direction: row;
+        gap: 60px;
+    }       
+    .navbar_responsive a, li{
+        color: aqua;
+    }
 }
+
+
+
+
