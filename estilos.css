@@ -367,10 +367,10 @@ legend {
     text-decoration: none;
     color: black;
     font-family: 'Ubuntu', sans-serif;
-/* background color degradado */ 
-/* https://cssgradient.io */  
-    background: rgb(190,193,236);
-    background: linear-gradient(180deg, rgba(190,193,236,1) 0%, rgba(195,113,193,1) 50%, rgba(236,195,235,1) 95%);
+    /* background color degradado */
+    /* https://cssgradient.io */
+    background: rgb(190, 193, 236);
+    background: linear-gradient(180deg, rgba(190, 193, 236, 1) 0%, rgba(195, 113, 193, 1) 50%, rgba(236, 195, 235, 1) 95%);
 }
 
 .titulo_form_repaso h1 {
@@ -390,47 +390,47 @@ legend {
     display: flex;
     flex-direction: column;
     align-items: center;
-/* Gap genera separacion en los elementos en este caso separa los input del div que contiene los p*/  
+    /* Gap genera separacion en los elementos en este caso separa los input del div que contiene los p*/
     gap: 10vh;
 }
 
-.div_form_repaso{
+.div_form_repaso {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10vh;
 }
 
-.div_form_repaso p a{
-  font-weight: 700;
-  color:#161614;
+.div_form_repaso p a {
+    font-weight: 700;
+    color: #161614;
 }
 
-.mensaje_error_form_repaso{
-  color: #D97A84 ;
-  text-align: center;
+.mensaje_error_form_repaso {
+    color: #D97A84;
+    text-align: center;
 }
 
-.input_form_repaso{
-  padding: 10px 3px;
-  border: none;
-  border-bottom: 1px solid;
+.input_form_repaso {
+    padding: 10px 3px;
+    border: none;
+    border-bottom: 1px solid;
 }
 
-.submit_form_repaso{
-  border: 1px solid white;
-  padding: 15px;
-  background-color: black;
-  color: white;
-  font-size: 1.1rem;
+.submit_form_repaso {
+    border: 1px solid white;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
 }
 
-.submit_form_repaso:hover{
-/* Transition genera un delay en el cambio de estilo. */  
-  transition: 1s all;
-  border: 1px solid black ;
-  background-color: white;
-  color:black;
+.submit_form_repaso:hover {
+    /* Transition genera un delay en el cambio de estilo. */
+    transition: 1s all;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
 }
 
 /* ---------------------------Responsive_Mobile First---------------------------------------------------------------- */
@@ -451,13 +451,13 @@ Dispositivos grandes (escritorios, 992px y superiores)
 Dispositivos extra grandes (escritorios grandes, 1200px y superiores)
 @media (min-width: 1200px) { ... }
 */
-.body_responsive{
-    
-}
-
-.navbar_contenedor_responsive{
+/* .body_responsive{
     background-color: black;
-    color:white;
+} */
+
+.navbar_contenedor_responsive {
+    background-color: black;
+    color: white;
     text-align: center;
     padding: 1%;
     display: flex;
@@ -465,16 +465,17 @@ Dispositivos extra grandes (escritorios grandes, 1200px y superiores)
     gap: 10px;
 }
 
- .navbar_responsive ul{
+.navbar_responsive ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.navbar_responsive a, li{
+.navbar_responsive a,
+li {
     list-style-type: none;
     color: white;
-}   
+}
 
 .section_responsive {
     width: 60%;
@@ -540,51 +541,55 @@ legend {
     font-size: 2rem;
 }
 
-@media(max-width: 575px){
-    Body{
-        background-color:yellow;
-        }
-    .formulario_responsive{
+@media(max-width: 575px) {
+    Body {
+        background-color: yellow;
+    }
+
+    .formulario_responsive {
         background-color: yellow;
         margin: 0;
         padding: 0;
-        }   
+    }
 }
 
-@media (min-width: 576px){
-    Body{
+@media (min-width: 576px) {
+    Body {
         background-color: green;
     }
 }
 
-@media (min-width: 768px){
-    Body{
+@media (min-width: 768px) {
+    Body {
         background-color: blue;
     }
-} 
+}
 
-@media (min-width: 992px){
-    Body{
+@media (min-width: 992px) {
+    Body {
         background-color: red;
     }
-    .navbar_contenedor_responsive{
+
+    .navbar_contenedor_responsive {
         flex-direction: row;
         gap: 60px;
-        justify-content:space-between;   
+        justify-content: space-between;
     }
-    .logo_responsive{
+
+    .logo_responsive {
         margin-left: 20px;
         color: aqua;
     }
-    .navbar_responsive ul{
+
+    .navbar_responsive ul {
         flex-direction: row;
         gap: 60px;
-    }       
-    .navbar_responsive a, li{
+    }
+
+    .navbar_responsive a,
+    li {
         color: aqua;
     }
 }
 
-
-
-
+/* ---------------------------------------------------Bootstrap---------------------------------------------------------------------- */
