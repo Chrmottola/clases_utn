@@ -625,4 +625,25 @@ legend {
     }
 }
 
+/* ----------------------------------------------JavaScript-------------------------------------------------------------------------- */
+.button_javascript{
+    border-radius: 10%;
+    border-width: 10px;
+    background-color: blueviolet;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    width: 25vh;
+    height: 10vh;
+    margin: 10vh 10vh;
+}
+
+
+
+
+
+
+
+
+
 /* ---------------------------------------------------Bootstrap---------------------------------------------------------------------- */
