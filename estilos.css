@@ -624,8 +624,14 @@ legend {
         color: aqua;
     }
 }
+/* ---------------------------------------------------Bootstrap---------------------------------------------------------------------- */
 
-/* ----------------------------------------------JavaScript-------------------------------------------------------------------------- */
+
+
+
+
+/* ----------------------------------------------------JavaScript--------------------------------------------------------------------- */
+
 .button_javascript{
     border-radius: 10%;
     border-width: 10px;
@@ -638,12 +644,42 @@ legend {
     margin: 10vh 10vh;
 }
 
+.contenedor_js{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 
+}
 
+.carta_js{
+    background-color: black;
+    color: white;
+    width: 25vh;
+    padding: 10px 5px;
+    border-radius: 25px ;
+    text-align: center;
+}
 
+.img_js{
+    width: 100%;
+    border-radius: 25px;
+}
 
+.h1_js{
+    text-align: center;
+}
 
+/*-----------------------------------------------------------Js2---------------------------------------------------------------------- */
 
+#Reloj_js2{
+    position: fixed;
+    bottom: 1vh;
+    font-size: 2rem;
+    border: 2px solid grey;
+    background-color: darkseagreen;
+    border-radius: 5px;
+    padding: 1rem;
+    font-family: monospace;
 
-
-/* ---------------------------------------------------Bootstrap---------------------------------------------------------------------- */
+}
