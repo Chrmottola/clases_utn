@@ -116,13 +116,16 @@ console.log(capuccino[4][1]);
 
 ---------------------Metodos de Array-----------------------------//
 ---------------------------Foreach--------------------------------//
+// For each tiene por defecto cargado 3 parametros de los elementos (valor,indice, array completo)
+// no es necesaria solicitar los 3 parametros.
+
 Se usa para recorrer un array.
-La variable objetos, en este caso, será el array a recorrer. Y la variable 
+La constante objetos, en este caso, será el array a recorrer. Y la variable 
 funcion es una función que será invocada por cada elemento que 
 exista dentro del array. A esa función se le pasan 3 argumentos: el 
 elemento, su índice, el array.
 
-let objetos=["Varita","Libro","Lechuza","Caldero"]
+const objetos=["Varita","Libro","Lechuza","Caldero"]
 
 objetos.foreach(function(objeto, indice, array));
 
@@ -536,26 +539,6 @@ const persona1 = new Persona("Homero", 39, "Av. Siempreviva 742");
 
 
 //---------------------------Practica-----------------------------//
-//-----------------(Calculo Indice Masa Corporal)-----------------//
-
-//Declarando variables
-
-let peso=79
-let estatura=1.67;
-//mostrando datos de variables en la consola
-console.log(estatura);
-//Asignando nuevos valores a la variables por medio del prompt
-
-peso=prompt("Ingrese su Peso");
-estatura=prompt("Ingrese su Estatura");
-
-//formula para colculo de indice de masa corporal
-
-let masa_corporal=(peso/(estatura*estatura));
-console.log(masa_corporal);
-
-let resultado_masa_corporal=("Su Indice de Masa Corporal es"+ " " + masa_corporal)
-alert(resultado_masa_corporal);
 
 -------------------------------------------------------------------
 //----------(Creamos un Array, utilizamos metodo include)--------//
@@ -578,7 +561,8 @@ et lista_super=["Harina","Papas","Peras","Jugo","Sal"];
 
 
 --------------------------for each--------------------------------//
-
+// For each tiene por defecto cargado 3 parametros de los elementos (valor,indice, array completo)
+// no es necesaria solicitar los 3 parametros en este caso solicitamos solo el valor del elemento
 
 let objetos_magicos =["Varita","Libro","Lechuza","Caldero"];
 
@@ -597,7 +581,7 @@ objetos_magicos.forEach((objetos_magicos)=>
 
 //--------------------------Map----------------------------------//
 
-
+// Devuelve un nuevo array modificando al original
 const numero=[1,2,3,4,5,6];
 // Recorro el array (numero) y multiplica los datos X2 Generando un nuevo array (por_2) con los resultado
 const por_dos= numero.map((datos_del_array)=> datos_del_array * 2);
@@ -815,64 +799,25 @@ for (const propiedad in producto1){
 }
 */
 
-// array con elementos
-const productos = [
-    {
-        name: "Celeron",
-        modelo: "C192",
-        precio: 4000,
-        thumbnail:"https://hardzone.es/2019/04/23/intel-gama-procesadores-core-9-generacion/intel-core-9a-generacion-01-2/"
-    },
-    {
-        name: "Pentium",
-        modelo: "X4",
-        precio: 5000,
-        thumbnail:"https://hardzone.es/2019/04/23/intel-gama-procesadores-core-9-generacion/intel-core-9a-generacion-01-2/"
+//-----------------(Calculo Indice Masa Corporal)-----------------//
 
-    },
-    {
-        name: "Intel Core",
-        modelo: "I3",
-        precio: 20000,
-        thumbnail:"https://hardzone.es/2019/04/23/intel-gama-procesadores-core-9-generacion/intel-core-9a-generacion-01-2/"
-    },
-    {
-        name: "Intel Core",
-        modelo: "I5",
-        precio: 30000,
-        thumbnail:"https://hardzone.es/2019/04/23/intel-gama-procesadores-core-9-generacion/intel-core-9a-generacion-01-2/"
-    },
-    {
-        name: "Intel Core",
-        modelo: "I7",
-        precio: 40000,
-        thumbnail:"https://hardzone.es/2019/04/23/intel-gama-procesadores-core-9-generacion/intel-core-9a-generacion-01-2/"
-    },
-    {
-        name: "Intel Core",
-        modelo: "I9",
-        precio: 50000,
-        thumbnail:"https://hardzone.es/2019/04/23/intel-gama-procesadores-core-9-generacion/intel-core-9a-generacion-01-2/"
-    },
-]
+//Declarando variables
 
-// accediendo al html en este caso al main atraves del id
-const contenedor_de_productos_html = document.getElementById("contenedor_de_productos")
+let peso=79
+let estatura=1.67;
+//mostrando datos de variables en la consola
+console.log(estatura);
+//Asignando nuevos valores a la variables por medio del prompt
 
-//Uso de  Comillas malas. para peder poner todo en renglones.
-//Creamos un objeto con atributos html
+peso=parseInt(prompt("Ingrese su Peso"));
+estatura=parseFloat(prompt("Ingrese su Estatura"));
 
-const CrearPlantilla=(producto)=>{
-    return `<div class="carta_js">
-    <h2>${producto.name}</h2>
-    <img src="${producto.thumbnail}" class="img_js">
-    <p>Modelo:${producto.modelo}</p>
-    <p>Precio:${producto.precio}</p>
-    </div>`
-}
-// Recorre el array y agrega en el main cada objeto del array
+//formula para colculo de indice de masa corporal
 
-for(let producto of productos){
-    contenedor_de_productos_html.innerHTML += CrearPlantilla(producto)
-}
+let masa_corporal=(peso/(estatura*estatura));
+console.log(masa_corporal);
+
+let resultado_masa_corporal=("Su Indice de Masa Corporal es"+ " " + masa_corporal)
+alert(resultado_masa_corporal);
+
 

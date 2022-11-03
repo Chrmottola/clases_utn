@@ -26,3 +26,4 @@ let cronometro = setInterval(mostrarHora, 1000);
 
 //LLamamos a la funcion creada
 mostrarHora() 
+

@@ -10,23 +10,49 @@
 </head>
 
 <body>
-  <h1 id="titulo">Manipulacion del DOM</h1>
-  <h2>Hola Mundo</h2>
+  <h1 class="h1_js">Lista de Productos</h1>
+    <form action="" id="formulario_js" class="formularioProductos">
+        <label for="nombre">
+            Nombre del producto:
+            <input type="text" name="name" id="nombre">
+        </label>
+        <label for="nombre">
+            Nombre del modelo
+            <input type="text" name="modelo" id="modelo">
+        </label>
+        <label for="nombre">
+            Precio del producto:
+            <input type="number" name="precio" id="precio">
+        </label>
+        <label for="nombre">
+            URL de la imagen
+            <input type="text" name="thumbnail" id="thumbnail">
+        </label>
 
-  <select name="" id="select">
+        <input type="submit">
+    </form>
 
+    <form action="">
+        <h2>Filtro de Precio</h2>
+        <select name="precio_para_filtrar" id="precio_para_filtrar">
+            <option value="">Todos</option>
+            <option value="5000">$5.000</option>
+            <option value="10000">$10.000</option>
+            <option value="15000">$15.000</option>
+            <option value="20000">$20:000</option>
+            <option value="30000">$30:000</option>
+        </select>
+    </form>    
+     
+    <main id="contenedor_de_productos" class="contenedor_js">   
+    
+    </main>
 
-  </select>
-
-
-  <hr>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sapiente repellendus nobis quis at fugiat,
-    molestiae ducimus dignissimos officiis? Necessitatibus assumenda quas error facilis laudantium nisi accusantium
-    facere dignissimos adipisci!</p>
-  <p class="parrafos">111</p>
-  <p class="parrafos">222</p>
-  <p class="parrafos">333</p>
-  <p class="parrafos">444</p>
+        <div>
+        <button class="button_javascript">
+            <a href="./index.html">Home</a></li>
+        </button>
+    </div>
 
 
   <script src="./javascript/Dom.js"></script>
